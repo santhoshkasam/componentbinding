@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
-  @Input() element: {type: string, name: string, content: string};
+  //Alias is given to this property so whereever we want to use we should access with srvElement.
+  @Input('srvElement') element: {type: string, name: string, content: string};
   constructor() { }
 
   ngOnInit(): void {

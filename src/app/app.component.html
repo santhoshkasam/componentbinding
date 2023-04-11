@@ -1,10 +1,13 @@
 <div class="container">
-  <app-cokpit></app-cokpit>
+  <app-cokpit 
+  (serverCreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cokpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
       <app-server-element 
-      *ngFor="let serverelement of serverElements" [element]="serverelement"></app-server-element>
+      *ngFor="let serverelement of serverElements" [srvElement]="serverelement"></app-server-element>
     </div>
   </div>
 </div>
