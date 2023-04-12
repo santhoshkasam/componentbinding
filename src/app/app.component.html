@@ -6,9 +6,10 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first component</button>
       <app-server-element 
       *ngFor="let serverelement of serverElements" [srvElement]="serverelement">
-      <p>
+      <p #conentParagraph>
         <strong *ngIf="serverelement.type === 'server'" style="color: red">{{ serverelement.content }}</strong>
         <em *ngIf="serverelement.type === 'blueprint'">{{ serverelement.content }}</em>
     </p>
